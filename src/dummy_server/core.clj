@@ -13,7 +13,12 @@
    :headers {"Content-Type" "text/plain"}})
 
 (defroutes handler
-  (ANY "/"          []   (response))
+  (ANY "/"               []   (response))
+  (ANY "/:a"             []   (response))
+  (ANY "/:a/:b"          []   (response))
+  (ANY "/:a/:b/:c"       []   (response))
+  (ANY "/:a/:b/:c/:d"    []   (response))
+  (ANY "/:a/:b/:c/:d/:e" []   (response))
   (route/not-found "Page not found"))
 
 (def app
